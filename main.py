@@ -12,6 +12,6 @@ def create_message(input):
     if input.lower() in {"btc"}:
         bf = 'https://lightning.bitflyer.jp/v1/ticker?product_code='
         b_btc_jpy  = "{0:>10}".format(str(requests.get(bf + 'BTC_JPY').json()['ltp']))
-        message = 'btc : ' + b_btc_jpy + ' JPY\n'
+        message = TextSendMessage(text = 'btc : ' + b_btc_jpy + ' JPY\n')
 
     return message
