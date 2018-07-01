@@ -1,6 +1,7 @@
 from linebot.models import (
     TextSendMessage, ImageSendMessage,
 )
+import requests
 
 def create_message(input):
 
