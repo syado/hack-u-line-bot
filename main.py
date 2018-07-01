@@ -7,7 +7,10 @@ def create_message(input):
     if input == "test":
         message = TextSendMessage(text = 'test')
     if input == "hack":
-        # 1. 固定メッセージを返す
         message = TextSendMessage(text = 'Hack Time!')
+    if input.lower() in {"btc"}:
+        bf = 'https://lightning.bitflyer.jp/v1/ticker?product_code='
+        b_btc_jpy  = "{0:>10}".format(str(requests.get(bf + 'BTC_JPY').json()['ltp']))
+        message = 'btc : ' + b_btc_jpy + ' JPY\n'
 
     return message
