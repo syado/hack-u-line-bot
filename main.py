@@ -3,7 +3,11 @@ from linebot.models import (
 )
 
 def create_message(input):
-    # 1. 固定メッセージを返す
-    message = TextSendMessage(text = 'Hack Time!')
+
+    if input == "test":
+        message = TextSendMessage(text = 'test')
+    if input == "hack":
+        # 1. 固定メッセージを返す
+        message = TextSendMessage(text = 'Hack Time!')
 
     return message
