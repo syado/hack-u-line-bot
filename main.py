@@ -34,7 +34,7 @@ def create_message(input):
                     num_len.append(num)
                     num_len2.append(num**2)
                 if len(num_len) == int(input[3:]):
-                    return message(str(num_len[int(input[3:]-1)]))
+                    return message(str(num_len[int(input[3:])-1]))
         except:
             text = "例(素数:10)"
 
