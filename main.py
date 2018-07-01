@@ -20,7 +20,7 @@ def create_message(input):
     else:
         ans = cal.cal(input)
         if ans != "err":
-            text = "計算結果\n"+ans
+            text = "計算結果\n"+str(ans)
         else:
             text = "hello"
     
