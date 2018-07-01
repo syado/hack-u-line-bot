@@ -1,9 +1,3 @@
-cal = {"+": lambda a, b: b + a,
-       "-": lambda a, b: b - a,
-       "*": lambda a, b: b * a,
-       "/": lambda a, b: b / a}
-kigo = ["+","-","*","/","(",")"]
-num = ["0","1","2","3","4","5","6","7","8","9","."]
 list_num = []
 list_kigo = []
 num_flag = False
@@ -18,6 +12,13 @@ def kigo_add(s):
     num_flag = False
     list_kigo.append(s)
 def cal(input):
+    global list_num, num_flag, list_kigo
+    cal = {"+": lambda a, b: b + a,
+       "-": lambda a, b: b - a,
+       "*": lambda a, b: b * a,
+       "/": lambda a, b: b / a}
+    kigo = ["+","-","*","/","(",")"]
+    num = ["0","1","2","3","4","5","6","7","8","9","."]
     try:
         s = list(input)
         for i in range(len(s)):
@@ -56,4 +57,3 @@ def cal(input):
 
     except:
         return "err"
-        input()
