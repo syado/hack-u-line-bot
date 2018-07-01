@@ -18,7 +18,7 @@ def create_message(input):
         b_btc_jpy  = "{0:>10}".format(str(requests.get(bf + 'BTC_JPY').json()['ltp']))
         text = 'BitCoin : ' + b_btc_jpy + ' JPY'
     else:
-        ans = cal(input)
+        ans = cal.cal(input)
         if ans != "err":
             text = "計算結果\n"+ans
         else:
