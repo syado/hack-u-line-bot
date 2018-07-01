@@ -22,7 +22,7 @@ def create_message(input):
             num_len = [2]
             num_len2 = [4]
             num_len3 = 1
-            for num in range(3, 10000, 2):
+            for num in range(3, 100000000, 2):
                 if  num > num_len2[num_len3-1]:
                     num_len3 = num_len3 + 1
                 flag =  True
